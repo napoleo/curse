@@ -1,0 +1,34 @@
+//js中的Date方法:
+var then  = new Date(2015,3,19); 			//2015年3月19日
+var later = new Date(2015,3,19,19,00,01);   //...19:00:01
+var now   = new Date();                     //返回现在的时间
+var elasped = now - then; 					//计算两者时间的毫秒差
+later.getFullYear();    					//年份
+later.getMonth();							//月份
+later.getDate();							//日期
+later.getDay();								//星期		
+later.getUTCHours();						//基于时区
+
+
+//js中字符串是不变的,类似replace()和toUpperCase()情况都返回新的字符串,原有字符不会发生变化
+
+
+//RegExp正则表达式regular expression
+
+
+//字符串的方法
+
+Number("33");   				//3  对参数更挑剔
+String("liuxinchu")===liuxinchu.toString();
+Object("3");					//new Number(3)
+parseInt("3a");                 //Number将返回NaN,parseint将返回3
+parseFloat("3.33")
+
+
+var scope = "globle";
+
+function f(){
+    console.log(scope);         //undefined
+    var scope = "local"; 		//虽然没有执行到这个局部变量的定义,但是依然有效
+    console.log(scope);  
+}
